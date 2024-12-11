@@ -50,9 +50,13 @@ ImageDataGenerator is used to preprocess and feed the data to the model in batch
 1. Download and unzip the dataset.
 
 2. Clone the repository
-``` git clone https://github.com/priyanshudutta04/Yoga-Pose-Detection.git ```
+   
+``` git clone https://github.com/sshresth09/yoga-pose-detector.git```
 
 3. Install dependencies
+   
 ``` pip install -r requirements.txt ```
+
 4. Run the Python File
+
 ```python yoga-detection.py```
