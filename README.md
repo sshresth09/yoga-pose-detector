@@ -1,4 +1,38 @@
 # Yoga-pose-detector
 
-### About
+## About
 This system leverages deep learning to identify yoga poses from live video feeds. It consists of two components: yoga-detection.py for real-time detection and model_training.py for training the pose classification model.
+
+## Approach
+The project utilizes a combination of YOLOv8 for object detection and a custom CNN model for yoga pose classification. YOLOv8 detects persons in video frames, while the CNN model predicts the specific yoga pose of the cropped person.
+
+## Data
+Dataset Source Link: [yoga pose images](https://universe.roboflow.com/new-workspace-mujgg/yoga-pose)
+
+
+
+## Data Preprocessing
+### a. Dataset
+Images for yoga poses are structured into training (data/train) and validation (data/valid) directories.
+Each class corresponds to a yoga pose, with 107 unique labels derived from traditional yoga poses.
+### b. Image Augmentation
+Rescaling: All images are normalized to have pixel values between 0 and 1.
+Target Size: Images are resized to 64x64 to match the input dimensions of the CNN model.
+### c. Batch Processing
+ImageDataGenerator is used to preprocess and feed the data to the model in batches
+
+## Architecture
+### a. CNN Classifier
+Input Layer: Accepts 64x64 RGB images.
+Convolutional Layers: Three layers with ReLU activation and batch normalization for feature extraction.
+Pooling Layers: Max pooling with a stride of 2 to downsample feature maps.
+Fully Connected Layers:
+Dense layer with 512 neurons for feature aggregation.
+Dropout of 0.5 to prevent overfitting.
+Dense layer with 256 neurons, followed by another dropout.
+Output layer with 107 neurons using a softmax activation function for pose classification.
+### b. Training
+Loss Function: Sparse Categorical Crossentropy.
+Optimizer: Adam optimizer for adaptive learning.
+Metrics: Accuracy on training and validation data.
+Epochs: 20 training iterations.
