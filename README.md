@@ -36,3 +36,15 @@ Loss Function: Sparse Categorical Crossentropy.
 Optimizer: Adam optimizer for adaptive learning.
 Metrics: Accuracy on training and validation data.
 Epochs: 20 training iterations.
+
+## Setup
+
+1. Download and unzip the dataset.
+
+2. Clone the repository
+``` git clone https://github.com/priyanshudutta04/Yoga-Pose-Detection.git ```
+
+3. Install dependencies
+``` pip install -r requirements.txt ```
+4. Run the Python File
+```python yoga-detection.py```
