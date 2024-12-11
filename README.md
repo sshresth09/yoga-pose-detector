@@ -23,19 +23,27 @@ ImageDataGenerator is used to preprocess and feed the data to the model in batch
 
 ## Architecture
 ### a. CNN Classifier
-Input Layer: Accepts 64x64 RGB images.
-Convolutional Layers: Three layers with ReLU activation and batch normalization for feature extraction.
-Pooling Layers: Max pooling with a stride of 2 to downsample feature maps.
-Fully Connected Layers:
-Dense layer with 512 neurons for feature aggregation.
-Dropout of 0.5 to prevent overfitting.
-Dense layer with 256 neurons, followed by another dropout.
-Output layer with 107 neurons using a softmax activation function for pose classification.
+<li>Input Layer: Accepts 64x64 RGB images.
+
+<li>Convolutional Layers: Three layers with ReLU activation and batch normalization for feature extraction.
+
+<li>Pooling Layers: Max pooling with a stride of 2 to downsample feature maps.
+
+<li>Fully Connected Layers:
+
+<li>Dense layer with 512 neurons for feature aggregation.
+
+<li>Dropout of 0.5 to prevent overfitting.
+
+<li>Dense layer with 256 neurons, followed by another dropout.
+
+<li>Output layer with 107 neurons using a softmax activation function for pose classification.
+  
 ### b. Training
-Loss Function: Sparse Categorical Crossentropy.
-Optimizer: Adam optimizer for adaptive learning.
-Metrics: Accuracy on training and validation data.
-Epochs: 20 training iterations.
+<li>Loss Function: Sparse Categorical Crossentropy.
+<li>Optimizer: Adam optimizer for adaptive learning.
+<li>Metrics: Accuracy on training and validation data.
+<li>Epochs: 20 training iterations.
 
 ## Setup
 
